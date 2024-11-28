@@ -12,6 +12,16 @@ public class ObjectStartState : MonoBehaviour
 
     public void ResetObjects()
     {
+        //reset slider values
+        foreach(Slider child in slider1.GetComponentsInChildren<Slider>())
+        {
+            child.value = 1;
+        }
+        foreach(Slider child in slider2.GetComponentsInChildren<Slider>())
+        {
+            child.value = 1;
+        }
+        
         //reset object position
         object1.transform.position = object1Start.position;
         object1.transform.rotation = object1Start.rotation;
@@ -19,11 +29,5 @@ public class ObjectStartState : MonoBehaviour
         object2.transform.position = object2Start.position;
         object2.transform.rotation = object2Start.rotation;
         object2.transform.localScale = object2Start.localScale;
-
-        //reset slider values
-        foreach(Slider child in slider1.GetComponentsInChildren<Slider>())
-        {
-            child.value = 1;
-        }
     }
 }
