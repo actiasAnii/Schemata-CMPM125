@@ -6847,6 +6847,20 @@ MonoBehaviour:
   originalMaterial: {fileID: 2100000, guid: 48237eea327fd48c4bd95b75854abb66, type: 2}
   objectGlow: {fileID: 2100000, guid: a6cd76ddba89044a4a616082f7fe7243, type: 2}
   Goal: {fileID: 0}
+  goalmarker1: {fileID: 0}
+  goalmarker2: {fileID: 0}
+  goal1xlow: 0
+  goal1xhigh: 0
+  goal1ylow: 0
+  goal1yhigh: 0
+  goal2xlow: 0
+  goal2xhigh: 0
+  goal2ylow: 0
+  goal2yhigh: 0
+  goal1scalexlow: 0
+  goal1scalexhigh: 0
+  goal2scalexlow: 0
+  goal2scalexhigh: 0
 --- !u!1 &1902553125
 GameObject:
   m_ObjectHideFlags: 0
