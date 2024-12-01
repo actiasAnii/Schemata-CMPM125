@@ -9,12 +9,14 @@ public class ScaleObject : MonoBehaviour
     // scale object with slider
     [SerializeField] public Slider _sliderX, _sliderY, _sliderZ;
     [SerializeField] private float scaleX, scaleY, scaleZ;
+    [SerializeField] public Vector3 startScale;
     public float prevScaleX, prevScaleY, prevScaleZ;
     private void Start()
     {
         prevScaleX = this.transform.localScale.x;
         prevScaleY = this.transform.localScale.y;
         prevScaleZ = this.transform.localScale.z;
+        startScale = this.transform.localScale;
 
         _sliderX.onValueChanged.AddListener((v) => {
             if(ManageSlider.SelectedObject == this.gameObject){
@@ -39,6 +41,14 @@ public class ScaleObject : MonoBehaviour
                 transform.localScale += new Vector3(0, 0, scaleZ);
             }
         });
+    }
+
+    public void ResetScale()
+    {
+        this.transform.localScale = startScale;
+        prevScaleX = this.transform.localScale.x;
+        prevScaleY = this.transform.localScale.y;
+        prevScaleZ = this.transform.localScale.z;
     }
 
     /*

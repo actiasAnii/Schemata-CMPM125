@@ -31,6 +31,7 @@ public class ManageSlider : MonoBehaviour
                     rotateX.value = rotateObjectInstance.prevScaleX;
                     rotateY.value = rotateObjectInstance.prevScaleY;
                     rotateZ.value = rotateObjectInstance.prevScaleZ;
+
                 }
                 ScaleObject scaleObjectInstance = SelectedObject.GetComponent<ScaleObject>();
                 if (scaleObjectInstance != null)
@@ -38,6 +39,10 @@ public class ManageSlider : MonoBehaviour
                     scaleX.value = scaleObjectInstance.prevScaleX;
                     scaleY.value = scaleObjectInstance.prevScaleY;
                     scaleZ.value = scaleObjectInstance.prevScaleZ;
+                    //set max value to double original scale
+                    scaleX.maxValue = scaleObjectInstance.startScale.x * 2;
+                    scaleY.maxValue = scaleObjectInstance.startScale.y * 2;
+                    scaleZ.maxValue = scaleObjectInstance.startScale.z * 2;
                 }
             }
         }

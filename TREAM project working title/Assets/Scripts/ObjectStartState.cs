@@ -5,29 +5,31 @@ using UnityEngine.UI;
 
 public class ObjectStartState : MonoBehaviour
 {
-    [SerializeField] public GameObject object1, object2;
-    [SerializeField] public Transform object1Start, object2Start;
-    [SerializeField] public GameObject slider1, slider2;
+    [SerializeField] public GameObject objectList;
+    [SerializeField] public GameObject slider1;
 
 
-    public void ResetObjects()
+    public void Reset()
     {
         //reset slider values
         foreach(Slider child in slider1.GetComponentsInChildren<Slider>())
         {
             child.value = 1;
         }
-        foreach(Slider child in slider2.GetComponentsInChildren<Slider>())
+        foreach(Transform child in objectList.transform)
         {
-            child.value = 1;
+            if(child.GetComponent<Drag>() != null)
+            {
+                child.GetComponent<Drag>().ResetObject();
+            }
+            if(child.GetComponent<RotateObject>() != null)
+            {
+                child.GetComponent<RotateObject>().ResetRotation();
+            }
+            if(child.GetComponent<ScaleObject>() != null)
+            {
+                child.GetComponent<ScaleObject>().ResetScale();
+            }
         }
-        
-        //reset object position
-        object1.transform.position = object1Start.position;
-        object1.transform.rotation = object1Start.rotation;
-        object1.transform.localScale = object1Start.localScale;
-        object2.transform.position = object2Start.position;
-        object2.transform.rotation = object2Start.rotation;
-        object2.transform.localScale = object2Start.localScale;
     }
 }

@@ -9,6 +9,6 @@ public class SetSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       slider.value = 1;
+       //slider.value = 1;
     }
 }
