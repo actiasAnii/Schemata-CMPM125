@@ -8,32 +8,35 @@ public class RotateObject : MonoBehaviour
     // rotate object with slider
     [SerializeField] public Slider _sliderX, _sliderY, _sliderZ;
     [SerializeField] private float rotateX, rotateY, rotateZ;
-    private float prevScaleX, prevScaleY, prevScaleZ;
+    public float prevScaleX, prevScaleY, prevScaleZ;
     private void Start()
     {
-        prevScaleX = 1;
-        prevScaleY = 1;
-        prevScaleZ = 1;
+        prevScaleX = this.transform.localRotation.x;
+        prevScaleY = this.transform.localRotation.y;
+        prevScaleZ = this.transform.localRotation.z;
 
         _sliderX.onValueChanged.AddListener((v) => {
-            rotateX = v - prevScaleX;
-            prevScaleX = v;
-            
-            //add to rotation x value
-            transform.localRotation *= Quaternion.Euler(new Vector3(rotateX, 0, 0));
-
+            if(ManageSlider.SelectedObject == this.gameObject){
+                rotateX = v - prevScaleX;
+                prevScaleX = v;
+                transform.localRotation *= Quaternion.Euler(new Vector3(rotateX, 0, 0));
+            }
         });
 
         _sliderY.onValueChanged.AddListener((v) => {
-            rotateY = v - prevScaleY;
-            prevScaleY = v;
-            transform.localRotation *= Quaternion.Euler(new Vector3(0, rotateY, 0));
+            if(ManageSlider.SelectedObject == this.gameObject){
+                rotateY = v - prevScaleY;
+                prevScaleY = v;
+                transform.localRotation *= Quaternion.Euler(new Vector3(0, rotateY, 0));
+            }
         });
 
         _sliderZ.onValueChanged.AddListener((v) => {
-            rotateZ = v - prevScaleZ;
-            prevScaleZ = v;
-            transform.localRotation *= Quaternion.Euler(new Vector3(0, 0, rotateZ));
+            if(ManageSlider.SelectedObject == this.gameObject){
+                rotateZ = v - prevScaleZ;
+                prevScaleZ = v;
+                transform.localRotation *= Quaternion.Euler(new Vector3(0, 0, rotateZ));
+            }
         });
     }
 

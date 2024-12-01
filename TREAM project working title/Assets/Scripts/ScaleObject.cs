@@ -9,32 +9,35 @@ public class ScaleObject : MonoBehaviour
     // scale object with slider
     [SerializeField] public Slider _sliderX, _sliderY, _sliderZ;
     [SerializeField] private float scaleX, scaleY, scaleZ;
-    private float prevScaleX, prevScaleY, prevScaleZ;
+    public float prevScaleX, prevScaleY, prevScaleZ;
     private void Start()
     {
-        prevScaleX = 1;
-        prevScaleY = 1;
-        prevScaleZ = 1;
+        prevScaleX = this.transform.localScale.x;
+        prevScaleY = this.transform.localScale.y;
+        prevScaleZ = this.transform.localScale.z;
 
         _sliderX.onValueChanged.AddListener((v) => {
-            scaleX = v - prevScaleX;
-            prevScaleX = v;
-            transform.localScale += new Vector3(scaleX, 0, 0);
-
+            if(ManageSlider.SelectedObject == this.gameObject){
+                scaleX = v - prevScaleX;
+                prevScaleX = v;
+                transform.localScale += new Vector3(scaleX, 0, 0);
+            }
         });
 
         _sliderY.onValueChanged.AddListener((v) => {
-            scaleY = v - prevScaleY;
-            prevScaleY = v;
-            transform.localScale += new Vector3(0, scaleY, 0);
-
+            if(ManageSlider.SelectedObject == this.gameObject){
+                scaleY = v - prevScaleY;
+                prevScaleY = v;
+                transform.localScale += new Vector3(0, scaleY, 0);
+            }
         });
 
         _sliderZ.onValueChanged.AddListener((v) => {
-            scaleZ = v - prevScaleZ;
-            prevScaleZ = v;
-            transform.localScale += new Vector3(0, 0, scaleZ);
-
+            if(ManageSlider.SelectedObject == this.gameObject){
+                scaleZ = v - prevScaleZ;
+                prevScaleZ = v;
+                transform.localScale += new Vector3(0, 0, scaleZ);
+            }
         });
     }
 
