@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class ObjectStartState : MonoBehaviour
 {
     [SerializeField] public GameObject objectList;
-    [SerializeField] public GameObject slider1;
-
+    [SerializeField] public GameObject slider1, panel;
 
     public void Reset()
     {
@@ -31,5 +30,11 @@ public class ObjectStartState : MonoBehaviour
                 child.GetComponent<ScaleObject>().ResetScale();
             }
         }
+
+        panel.SetActive(false);
+    }
+    void Start()
+    {
+        panel.SetActive(false);
     }
 }

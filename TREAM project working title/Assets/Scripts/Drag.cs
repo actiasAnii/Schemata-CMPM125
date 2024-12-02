@@ -7,6 +7,7 @@ public class Drag : MonoBehaviour
 {
     // get object start position
     [SerializeField] public Vector3 startPos;
+    public GameObject panel;
 
     void Start()
     {

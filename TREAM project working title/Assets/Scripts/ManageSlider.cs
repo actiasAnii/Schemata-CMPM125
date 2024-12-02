@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ManageSlider : MonoBehaviour
 {
-    [SerializeField] private GameObject slider;
+    [SerializeField] private GameObject slider, panel;
     [SerializeField] private Slider rotateX, rotateY, rotateZ;
     [SerializeField] private Slider scaleX, scaleY, scaleZ;
     public static GameObject activeObject;
@@ -22,6 +22,9 @@ public class ManageSlider : MonoBehaviour
         if (SelectedObject != null)
         {
             if(SelectedObject != activeObject){
+                if(!panel.activeSelf){
+                    panel.SetActive(true);
+                }
                 Debug.Log(SelectedObject.name);
                 activeObject = SelectedObject;
                 slider.SetActive(true);
