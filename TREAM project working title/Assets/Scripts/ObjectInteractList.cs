@@ -18,7 +18,7 @@ public class ObjectInteractList : MonoBehaviour
         other.gameObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.magenta);
         Debug.Log("Collision - Trigger");
 
-        // if at least 8 objects are touching, make door glow
+        // if at least 8 objects are touching, make door glow. will probably have a very different condition
         if (AllInteractables.Count >= 8)
         {
             door.GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");

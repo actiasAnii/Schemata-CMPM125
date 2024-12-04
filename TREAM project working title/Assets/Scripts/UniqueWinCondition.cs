@@ -8,6 +8,7 @@ public class UniqueWinCondition : MonoBehaviour
     private List<GameObject> Explored = new List<GameObject>();
     [SerializeField] private GameObject StartingPoint;
     [SerializeField] private GameObject EndingPoint;
+
     // Start is called before the first frame update
     public bool CheckIfBridged()
     {

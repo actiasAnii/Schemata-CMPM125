@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
+// still could use some improvement. feels a little awkward to use
 public class move : MonoBehaviour
 {
     // Camera movement code from youtube tutorial -- https://www.youtube.com/watch?v=zVX9-c_aZVg&t=123s
@@ -12,38 +14,42 @@ public class move : MonoBehaviour
     private Vector3 currentRotation;
     private Vector3 smoothVelocity = Vector3.zero;
     [SerializeField] private float smoothTime = 1f;
+
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-
-        rotationY += mouseX;
-        rotationX -= mouseY;
-
-        rotationX = Mathf.Clamp(rotationX, -40, 40);
-
-        Vector3 nextRotation = new Vector3(rotationX, rotationY);
-        currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
-
-        transform.localEulerAngles = currentRotation;
-        transform.position = target.position - transform.forward * distanceFromTarget;
-
-        // move camera with arrow keys
-        if (Input.GetKey(KeyCode.W))
+        if (!EventSystem.current.IsPointerOverGameObject()) // made it so camera doesnt keep moving when you're messing with the object editor cause that was annoying
         {
-            target.transform.position += target.transform.forward * 0.1f;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            target.transform.position -= target.transform.forward * 0.1f;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            target.transform.position -= target.transform.right * 0.1f;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            target.transform.position += target.transform.right * 0.1f;
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+
+            rotationY += mouseX;
+            rotationX -= mouseY;
+
+            rotationX = Mathf.Clamp(rotationX, -40, 40);
+
+            Vector3 nextRotation = new Vector3(rotationX, rotationY);
+            currentRotation = Vector3.SmoothDamp(currentRotation, nextRotation, ref smoothVelocity, smoothTime);
+
+            transform.localEulerAngles = currentRotation;
+            transform.position = target.position - transform.forward * distanceFromTarget;
+
+            // move camera with wasd
+            if (Input.GetKey(KeyCode.W))
+            {
+                target.transform.position += target.transform.forward * 0.1f;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                target.transform.position -= target.transform.forward * 0.1f;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                target.transform.position -= target.transform.right * 0.1f;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                target.transform.position += target.transform.right * 0.1f;
+            }
         }
     }
 
