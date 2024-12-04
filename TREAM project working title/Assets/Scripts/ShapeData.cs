@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "ShapeData", menuName = "Shapes/ShapeData")]
+[CreateAssetMenu (fileName = "ShapeData", menuName = "Puzzle Objects/ShapeData")]
 public class ShapeData : ScriptableObject
 {
     public string shapeType;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// still could use some improvement. feels a little awkward to use
+// needs improvement. feels a bit awkward to use and also doesnt work with the clock puzzle
 public class move : MonoBehaviour
 {
     // Camera movement code from youtube tutorial -- https://www.youtube.com/watch?v=zVX9-c_aZVg&t=123s
