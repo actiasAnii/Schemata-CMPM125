@@ -12,7 +12,7 @@ public class sceneTrans : MonoBehaviour
 
     public void Overworld()
     {
-        SceneManager.LoadScene("Overworld");
+        SceneManager.LoadScene("overworld");
     }
 
     public void Nightmare()

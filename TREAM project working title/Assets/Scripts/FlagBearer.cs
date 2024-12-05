@@ -12,14 +12,21 @@ public class FlagBearer : MonoBehaviour
     {
         GameObject FlagShip = GameObject.Find("TheSingleton");
         uint FlagID = FlagShip.GetComponent<singlinton>().getFlag();
-        if((FlagNum&FlagID) == 1)
-        {
-            this.enabled = false;
-        }
+        //if((FlagNum&FlagID) == 1)
+        //{
+        //    this.enabled = false;
+        //}
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter(Collision collision)
     {
+        print("hullo");
+        SceneManager.LoadScene(SceneTransitionName);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        print("hullo");
         SceneManager.LoadScene(SceneTransitionName);
     }
 }

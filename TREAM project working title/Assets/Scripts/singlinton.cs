@@ -27,7 +27,15 @@ public class singlinton : MonoBehaviour
         StreamReader bleh = new StreamReader("SaveData.txt");
         if (File.Exists("SaveData.txt"))
         {
-            flags = uint.Parse(bleh.ReadLine());
+            string temp = bleh.ReadLine();
+            if (temp == null)
+            {
+                flags = 0;
+            }
+            else
+            {
+                flags = uint.Parse(temp);
+            }
         }
     }
 

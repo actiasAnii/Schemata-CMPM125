@@ -166,7 +166,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1a164065a621e4bb5b4b5e49b60cc165, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.236
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -889,6 +889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &70135675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,6 +3245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &380383369
 GameObject:
   m_ObjectHideFlags: 0
@@ -3672,6 +3674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &410337886
 GameObject:
   m_ObjectHideFlags: 0
@@ -7256,6 +7259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!43 &669001588
 Mesh:
   m_ObjectHideFlags: 0
@@ -10593,6 +10597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &868977131
 GameObject:
   m_ObjectHideFlags: 0
@@ -11191,6 +11196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!43 &898983251
 Mesh:
   m_ObjectHideFlags: 0
@@ -12531,6 +12537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: 1d80d49c0dfe42746b4fe96f49619511, type: 2}
   glowMaterial: {fileID: 2100000, guid: b627add965c356448a44c3b7fe7a383a, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &944325051
 GameObject:
   m_ObjectHideFlags: 0
@@ -14911,6 +14918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &1095360870
 GameObject:
   m_ObjectHideFlags: 0
@@ -15450,6 +15458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &1141465143
 GameObject:
   m_ObjectHideFlags: 0
@@ -15878,6 +15887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: b7855ddbf13e8794987f5b3588fb1ff5, type: 2}
   glowMaterial: {fileID: 2100000, guid: b627add965c356448a44c3b7fe7a383a, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &1166100860
 GameObject:
   m_ObjectHideFlags: 0
@@ -17567,6 +17577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &1319718938
 GameObject:
   m_ObjectHideFlags: 0
@@ -18070,6 +18081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &1371248139
 GameObject:
   m_ObjectHideFlags: 0
@@ -23525,6 +23537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &1605739310
 GameObject:
   m_ObjectHideFlags: 0
@@ -25117,6 +25130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: d73fe76697f3b4d499c8211310f9e127, type: 2}
   glowMaterial: {fileID: 2100000, guid: cedf95bb12161ec4cb24169ce4cdfa61, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!43 &1768211059
 Mesh:
   m_ObjectHideFlags: 0
@@ -28474,6 +28488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clockPartData: {fileID: 11400000, guid: becb12fce23a15e4783cdf49ef9ba45b, type: 2}
   glowMaterial: {fileID: 2100000, guid: 4f66dda7ea393fd4fa2a7f0fc216c840, type: 2}
+  correctPosition: {fileID: 0}
 --- !u!1 &2081180380
 GameObject:
   m_ObjectHideFlags: 0
