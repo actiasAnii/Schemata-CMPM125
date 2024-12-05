@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 375422655fcc96b46bd0b085493592e9
+  - enabled: 1
+    path: Assets/Scenes/overworld.unity
+    guid: 361acfbc04540e6468dc80c3dd2dc3a5
+  - enabled: 1
+    path: Assets/Scenes/Nightmare Puzzle.unity
+    guid: fffc4494243bfe141b8fefff88845d9a
+  - enabled: 1
+    path: Assets/Scenes/Resolution Puzzle.unity
+    guid: efc5c1cdf2d1424418795eea53e1b7de
   m_configObjects: {}
