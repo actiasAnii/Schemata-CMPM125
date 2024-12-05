@@ -11,6 +11,7 @@ public class ObjectInteractionHandler : MonoBehaviour
     private Renderer objectRenderer;
     private Rigidbody rb;
     private bool isGravityEnabled = false;
+    public AudioSource correctPosition, incorrectPosition;
 
     void Start()
     {
@@ -52,6 +53,7 @@ public class ObjectInteractionHandler : MonoBehaviour
             else if (shapeData.cannotTouch.Contains(otherShapeType) && !isGravityEnabled)
             {
                 Debug.Log($"{gameObject.name} cannot touch {other.gameObject.name}");
+                incorrectPosition.Play();
 
                 // object should fall
                 StartCoroutine(FallDown());
@@ -75,6 +77,7 @@ public class ObjectInteractionHandler : MonoBehaviour
         if (objectRenderer != null && glowMaterial != null)
         {
             objectRenderer.material = glowMaterial;
+            correctPosition.Play();
         }
     }
 
