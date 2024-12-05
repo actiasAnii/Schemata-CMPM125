@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: DataStair
   m_EditorClassIdentifier: 
   shapeType: Stair
+  active: 1
   canTouch:
   - Prism
   - Cube
+  - Pyramid
   cannotTouch: []

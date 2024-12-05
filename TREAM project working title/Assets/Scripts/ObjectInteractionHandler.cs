@@ -95,6 +95,7 @@ public class ObjectInteractionHandler : MonoBehaviour
         if (rb != null)
         {
             rb.useGravity = true;
+            rb.isKinematic = false;
 
             rb.velocity = new Vector3(0, -5f, 0);
 
@@ -107,8 +108,11 @@ public class ObjectInteractionHandler : MonoBehaviour
 
             rb.velocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
+            rb.useGravity = false;
+            rb.isKinematic = false;
 
             isGravityEnabled = false;
+
         }
         else
         {

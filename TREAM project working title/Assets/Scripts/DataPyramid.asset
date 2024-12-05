@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: DataPyramid
   m_EditorClassIdentifier: 
   shapeType: Pyramid
-  active: 0
+  active: 1
   canTouch:
   - Stair
+  - Cube
   cannotTouch:
   - Prism
