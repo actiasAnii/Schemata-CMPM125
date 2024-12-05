@@ -50,7 +50,7 @@ public class ObjectPlacementHandler : MonoBehaviour
             clockPartData.validRotations.Add(obj.transform.rotation);
         }
 
-        Debug.Log($"Populated {clockPartData.validPositions.Count} valid positions for {gameObject.name}.");
+        //Debug.Log($"Populated {clockPartData.validPositions.Count} valid positions for {gameObject.name}.");
     }
 
     // still kind of bugged. need to find a way for objects to not be able to occupy the same space
@@ -74,7 +74,6 @@ public class ObjectPlacementHandler : MonoBehaviour
                 }
             }
         }
-        
         if (isGlowing)
         {
             RemoveGlow();
@@ -89,7 +88,6 @@ public class ObjectPlacementHandler : MonoBehaviour
         {
             if (Vector3.Distance(position, validPosition) <= moePosition)
             {
-                //Debug.Log($"Correct position reached for {gameObject.name}");
                 return true;
             }
         }
@@ -127,6 +125,7 @@ public class ObjectPlacementHandler : MonoBehaviour
         if (objectRenderer != null && glowMaterial != null)
         {
             objectRenderer.material = glowMaterial;
+            isGlowing = true;
         }
     }
 
@@ -135,6 +134,7 @@ public class ObjectPlacementHandler : MonoBehaviour
         if (objectRenderer != null && originalMaterial != null)
         {
             objectRenderer.material = originalMaterial;
+            isGlowing = false;
         }
 
     }

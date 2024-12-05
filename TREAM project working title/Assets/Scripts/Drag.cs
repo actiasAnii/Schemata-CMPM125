@@ -34,7 +34,6 @@ public class Drag : MonoBehaviour
         ObjectPlacementHandler placementHandler = GetComponent<ObjectPlacementHandler>();
         if (placementHandler != null)
         {
-            // Call CheckPosition if the component exists
             placementHandler.CheckTransform();
         }
 
