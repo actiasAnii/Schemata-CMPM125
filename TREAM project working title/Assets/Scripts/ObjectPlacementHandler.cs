@@ -18,6 +18,8 @@ public class ObjectPlacementHandler : MonoBehaviour
     private float moeRotation = 5f;
     private float moeScale = 0.5f;
 
+    public AudioSource correctPosition;
+
     private void Start()
     {
         objectRenderer = GetComponent<Renderer>();
@@ -65,6 +67,7 @@ public class ObjectPlacementHandler : MonoBehaviour
                     if (!isGlowing)
                     {
                         ApplyGlow();
+                        correctPosition.Play();
                         clockPartData.active = true;
                     }
                     return;
