@@ -18325,6 +18325,7 @@ MonoBehaviour:
   flag: 0
   cam: {fileID: 1840359618}
   winObj: {fileID: 777607817}
+  SceneTransitionName: overworld
   puzzleObjectTag: PuzzleObject
 --- !u!4 &1881485233
 Transform:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private uint flag;
     [SerializeField] Camera cam;
     [SerializeField] GameObject winObj;
+    [SerializeField] string SceneTransitionName;
     public string puzzleObjectTag = "PuzzleObject";
 
     void Start()
@@ -57,8 +59,9 @@ public class PuzzleManager : MonoBehaviour
             winObj.GetComponent<Animator>().enabled = true;
             cam.GetComponent<Animator>().Play("WinCutscene");
             winObj.GetComponent<Animator>().Play("ReactCutscene");
+            SceneManager.LoadScene(SceneTransitionName);
 
-            // add additional actions
+
         }
         else
         {
