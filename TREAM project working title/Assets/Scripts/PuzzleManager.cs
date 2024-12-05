@@ -5,7 +5,9 @@ using UnityEngine;
 public class PuzzleManager : MonoBehaviour
 {
     public List<GameObject> puzzleObjects;
-
+    [SerializeField] private uint flag;
+    [SerializeField] Camera cam;
+    [SerializeField] GameObject winObj;
     public string puzzleObjectTag = "PuzzleObject";
 
     void Start()
@@ -45,12 +47,22 @@ public class PuzzleManager : MonoBehaviour
         if (isComplete)
         {
             Debug.Log("Puzzle Complete!");
+            GameObject temp = GameObject.Find("TheSingleton");
+            if (temp != null)
+            {
+                temp.GetComponent<singlinton>().UpdateSingl(flag);
+                temp.GetComponent<singlinton>().SaveGameData();
+            }
+            cam.GetComponent<Animator>().enabled = true;
+            winObj.GetComponent<Animator>().enabled = true;
+            cam.GetComponent<Animator>().Play("WinCutscene");
+            winObj.GetComponent<Animator>().Play("ReactCutscene");
 
             // add additional actions
         }
         else
         {
-            // Debug.Log("Puzzle not yet Complete");
+            Debug.Log("Puzzle not yet Complete");
         }
     }
 

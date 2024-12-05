@@ -33,7 +33,7 @@ public class move : MonoBehaviour
             transform.localEulerAngles = currentRotation;
             transform.position = target.position - transform.forward * distanceFromTarget;
 
-            // move camera with wasd
+            // move camera with wasd + space and shift to move up and down
             if (Input.GetKey(KeyCode.W))
             {
                 target.transform.position += target.transform.forward * 0.1f;
@@ -49,6 +49,14 @@ public class move : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 target.transform.position += target.transform.right * 0.1f;
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                target.transform.position += target.transform.up * 0.1f;
+            }
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                target.transform.position += target.transform.up * -0.1f;
             }
         }
     }
