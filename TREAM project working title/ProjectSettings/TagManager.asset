@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - PuzzleObject
+  - ClockGraduation
+  - Pointer
+  - Center
+  - MinuteHand
   layers:
   - Default
   - TransparentFX

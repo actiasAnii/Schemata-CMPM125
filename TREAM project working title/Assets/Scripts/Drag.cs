@@ -29,5 +29,14 @@ public class Drag : MonoBehaviour
     }
     private void OnMouseDrag(){
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition - mousePosition);
+
+        // for nightmare puzzle, check if in the correct position here
+        ObjectPlacementHandler placementHandler = GetComponent<ObjectPlacementHandler>();
+        if (placementHandler != null)
+        {
+            // Call CheckPosition if the component exists
+            placementHandler.CheckTransform();
+        }
+
     }
 }
